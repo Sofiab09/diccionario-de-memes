@@ -19,4 +19,9 @@ elif word == "SORPRENDEME":
     print("la palabra que conoceras hoy es:",r_word,":",meme_dict[r_word])
 
 else:
-    print("Esta palabra aún no se agrega al diccionario")
+    agregar = input("Esta palabra aún no se agrega al diccionario, te gustaría agregarla?(si o no)").lower()
+    if agregar=="si":
+        sig_nuevo = input("Escribe el significado de la palabra que ingresaste: ").lower()
+        meme_dict.update({word: sig_nuevo})
+        print("¡La palabra ha sido agregada exitosamente!",meme_dict)
+
